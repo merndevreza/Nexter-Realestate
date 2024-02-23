@@ -1,0 +1,37 @@
+body{
+    @extend %lead;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: var(--color-dark-2);
+}
+.heading-1{
+    @extend %heading;
+    font-size: 4.5rem;
+}
+.heading-2{
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+}
+.heading-3{
+    @extend %heading;
+    font-size: 1.8rem;
+}
+.heading-4{
+    @extend %heading;
+    font-size: 1.9rem;
+    &--dark{
+        color: var(--color-dark-1);
+    }
+}
+.heading-5{
+    @extend %heading;
+    font-size: 1.6rem;
+}
+
+.lead-1{
+    @extend %lead;
+}
+.lead-2{
+    @extend %lead;
+}

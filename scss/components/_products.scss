@@ -1,0 +1,61 @@
+.products{
+    grid-column: center-start/center-end;
+    padding: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-gap: 7rem;
+    @include media (bp-800){
+        padding: 10rem 0;
+    }
+    @include media (bp-500){
+        padding: 5rem 0;
+    }
+}
+
+.product{
+    background-color: var(--color-light-1);
+        &__img-icon{
+            position: relative;
+            img{
+                width: 100%;
+            }
+            svg{
+                width: 2.5rem;
+                height: 2.5rem;
+                fill: var(--color-primary);
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+        }
+        &__name{
+            text-align: center;
+            transform: translateY(-50%);
+            span{
+                background-color: var(--color-secondary);
+                color: var(--color-light);
+                padding: 1.6rem 3rem;
+                display: inline-block;
+            }
+        }
+        &__overview{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 2rem;
+            grid-row-gap: 3rem;
+            padding: 2rem;
+            padding-bottom: 4rem;
+            &--item{
+                display: flex;
+                svg{
+                    width: 2rem;
+                    height: 2rem;
+                    fill: var(--color-primary);
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .btn-primary{
+            display: block;
+        }
+}

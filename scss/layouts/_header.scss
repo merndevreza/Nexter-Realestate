@@ -1,0 +1,71 @@
+.header{
+    background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-column: full-start/col-end 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 6vw 8rem;
+    @include media (bp-800){
+        grid-column: 1/-1;
+    }
+    &__logo{
+        text-align: center;
+        .logo{
+            display: inline-block;
+            height: 3rem;
+        }
+    }
+    &__main-text{
+        h5{
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+        }
+        h1{
+            color: var(--color-light);
+            margin-bottom: 3rem;
+        }
+    }
+    &__brands{
+        &--heading{
+            text-align: center;
+            position: relative;
+            color: var(--color-light-2);
+            margin-bottom: 1rem;
+            &::before,
+            &::after{
+                content:"";
+                position: absolute;
+                width: 43%;
+                height: 1px;
+                background-color: currentColor;
+                top: 50%;
+                @include media (bp-800){
+                    width: 40%;
+                }
+                @include media (bp-500){
+                    width: 38%;
+                }
+            }
+            &::before{
+                left: 0;
+            }
+            &::after{
+                right: 0;
+            }
+        }
+        &--img{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 3rem;
+            justify-items: center;
+            align-items: center;
+            img{
+                max-height: 2.5rem;
+                max-width: 100%;
+                filter: brightness(.7);
+            }
+        }
+    }
+}

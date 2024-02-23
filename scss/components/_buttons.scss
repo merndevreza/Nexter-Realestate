@@ -1,0 +1,22 @@
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	line-height: 1;
+	margin-bottom: 0;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	white-space: nowrap;
+}
+.btn-primary{
+	font-family: var(--font-secondary);
+	font-size: 1.5rem;
+	font-weight: 400;
+	padding: 1.8rem 3rem;
+	background-color: var(--color-primary);
+	color: var(--color-light);
+	&:hover{
+		background-color: var(--color-primary-dark);
+	}
+}

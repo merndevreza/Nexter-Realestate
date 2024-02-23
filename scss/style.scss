@@ -1,0 +1,47 @@
+/*
+  Theme Name: Nexture
+  Author: rezaulkarimpstu@gmail.com
+  Support: webdevreza@gmail.com
+  Description: Creative  HTML5 template.
+  Version: 1.0
+*/
+
+/*===========
+abstracts
+=============*/
+@import "abstracts/extends";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+/*===========
+base
+=============*/
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+/*===========
+components
+=============*/
+@import "components/buttons";
+@import "components/features";
+@import "components/gallery";
+@import "components/products";
+@import "components/realtors";
+@import "components/sidebar";
+@import "components/story";
+
+/*===========
+layout
+=============*/
+@import "layouts/header";
+@import "layouts/natigation";
+@import "layouts/footer";
+/*===========
+pages
+=============*/
+@import "pages/home";
+
+
+
+

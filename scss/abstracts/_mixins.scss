@@ -1,0 +1,39 @@
+//Media Query Manager
+/*
+Mobile group--- 360,414,390,412,375,393,428,480  
+Tablet group (p)--- 768,810,1280,800,601,962,1024,834,1334 
+Tablet group (L)--- 962,1024 
+Desktop group--- 1920, 1366,1536,1280,1440,1600,2560 
+Big Desktop --- 1920, 2560
+---------------------------
+1em = 16px, em is better for media query. 
+em unit will be changed if user have changed his browser default font size.
+*/
+
+// Perfect way
+
+
+
+@mixin media ($breakpoint) {
+    @if $breakpoint == bp-1100{
+        @media only screen and (max-width:68.75em){@content}; //1100px
+    }
+    @if $breakpoint == bp-1000{
+        @media only screen and (max-width:62.5em){@content}; //1000px
+    }
+    @if $breakpoint == bp-800{
+        @media only screen and (max-width:50em){@content}; //800px
+    }
+    @if $breakpoint == bp-500{
+        @media only screen and (max-width:31.25em){@content}; //500px
+    }
+    @if $breakpoint == phone-md{
+        @media only screen and (max-width:30em){@content}; //480px
+    }
+    @if $breakpoint == phone-sm{
+        @media only screen and (max-width:25.875em){@content}; //359px
+    }
+    @if $breakpoint == desktop-lg{
+        @media only screen and (min-width:100em){@content}; //1800px
+    }
+}

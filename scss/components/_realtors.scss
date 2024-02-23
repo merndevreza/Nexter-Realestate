@@ -1,0 +1,47 @@
+.realtors{
+    background-color: var(--color-secondary);
+    grid-column: col-start 7 / full-end;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-row-gap: 3rem;
+    @include media (bp-800){
+        padding: 3rem 0;
+        grid-column: full-start/ full-end;
+    }
+    h5{
+        text-align: center;
+        color: var(--color-primary);
+    }
+}
+.realtor{
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+    align-items: center;
+    @include media (bp-800){
+        grid-template-columns:  repeat(3, 7rem max-content);
+        grid-column-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+    @include media (bp-500){
+        grid-template-columns: 7rem 1fr;
+    }
+    
+    &__img{
+        transform: translateY(-.5rem);
+        max-width: 100%;
+        border-radius: 50%;
+    }
+    &__info{
+        color: var(--color-light);
+        &--name{
+            margin-bottom: .4rem;
+        }
+        &--sale{
+            font-size: 1rem;
+            color: var(--color-light-2);
+        }
+    }
+}

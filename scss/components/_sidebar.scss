@@ -1,0 +1,48 @@
+.sidebar{
+    background-color: var(--color-primary);
+    grid-column: sidebar-start/sidebar-end;
+    grid-row: 1/-1;
+    display: grid;
+    justify-content: center;
+    @include media (bp-1000){
+        grid-column: 1/-1;
+        grid-row: auto;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .sidebar-icon{
+        height: 2px;
+        width: 4.5rem;
+        background-color: var(--color-light);
+        margin-top: 4rem;
+        position: relative;
+        cursor: pointer;
+        @include media (bp-1000){
+            width: 4rem;
+            margin-top: 0;
+            margin-right: 2.5rem;
+        }
+        &::before,
+        &::after{
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-light);
+        }
+        &::before{
+            top: -1.5rem;
+            @include media (bp-1000){
+                top: -1rem;
+            }
+        }
+        &::after{
+            top: 1.5rem;
+            @include media (bp-1000){
+                top: 1rem;
+            }
+        }
+
+    }
+}

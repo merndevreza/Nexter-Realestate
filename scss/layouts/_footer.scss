@@ -1,0 +1,54 @@
+.footer{
+    background-color: var(--color-secondary);
+    grid-column: full-start/full-end;
+    padding: 8rem;
+    @include media (bp-800){
+        padding: 6rem;
+    }
+    @include media (bp-500){
+        padding: 5rem;
+    }
+    &__nav{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+        grid-gap: 5rem;
+        @include media (bp-800){
+            grid-gap: 3rem;
+        }
+        @include media (bp-500){
+            grid-gap: 2rem;
+        }
+        &--link{
+            font-size: 1.2rem;
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--color-light-1);
+            padding: 1rem 1.5rem;
+            text-align: center;
+            line-height: 1.2;
+            border-radius: 2px;
+            transition: transform .2s linear;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.1);
+                transform: translateY(-.5rem);
+            }
+        }
+    }
+    &__copyright{
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 5rem;
+        font-size: 1.3rem;
+        text-align: center;
+        color: var(--color-light-2);
+        @include media (bp-1000){
+            width: 80%;
+        }
+        @include media (bp-800){
+            width: 90%;
+        }
+        @include media (bp-500){
+            width: 100%;
+        }
+    }
+}
